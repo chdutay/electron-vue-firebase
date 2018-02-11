@@ -1,0 +1,193 @@
+= Building a Bookmarking App with Electron, VueJs, and Firebase
+
+From article https://coligo.io/bookmarking-app-electron-vuejs-firebase/
+
+== Setting up the Project
+
+- *app/* will contain the source code for our Vue components, filters, store, and Firebase logic that we write
+- *dist/* will contain all the final code from app/, bundled using Webpack
+- *static/* contains the CSS and JS used by our application
+- *index.html* is the page Electron will render when the app is started
+- *main.js* will start the Electron app and render index.html in the window
+- *webpack.config.js* will contain the necessary Webpack configurations (don't worry, we'll conquer this!)
+
+----
+mkdir app dist static
+copy /y NUL index.html >NUL
+copy /y NUL main.js >NUL
+copy /y NUL webpack.config.js >NUL
+npm init -y
+npm install --save firebase vue jquery
+npm install --save-dev electron-prebuilt
+----
+
+Edit package.json and change to :
+
+----
+"scripts": {
+    "start": "electron main.js"
+}
+----
+
+=== Configuring Webpack
+
+Plus d'information sur webpack :
+
+* http://putaindecode.io/fr/articles/js/webpack/premier-exemple/
+* https://www.alsacreations.com/tuto/lire/1754-debuter-avec-webpack.html
+
+----
+npm install\
+  webpack webpack-dev-server\
+  vue-template-compiler vue-loader vue-html-loader css-loader vue-style-loader vue-hot-reload-api\
+  babel-loader babel-core babel-plugin-transform-runtime babel-preset-env\
+  babel-runtime@5\
+  --save-dev
+----
+
+Check webpack.config.js and run 
+
+----
+webpack
+----
+
+[TIP]
+--
+Si la commande webpack n'est pas trouvée, il faut l'installer de manière globale sur le PC
+----
+npm install -g webpack
+----
+--
+
+[WARNING]
+--
+Depuis la rédaction de l'article la configuration de webpack et babel à changer. 
+
+Loaders have to name it with "-loader" suffix
+
+----
+ module: {
+        loaders: [{
+                test: /\.vue$/,
+                loader: 'vue-loader'
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/
+            }
+        ]
+    },
+----  
+
+And section "babel" has to be inside plugins field:
+
+----
+    plugins: [
+        new webpack.ExternalsPlugin('commonjs', [
+            'electron'
+        ]),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                babel: {
+                    "presets": ["es2015"],
+                    "plugins": ["transform-runtime"]
+                },
+            }
+        })
+    ]
+----
+--
+
+== Creating the Electron App
+
+Initialize main.js and index.html file
+
+== Building the Components with VueJs and Storage with Firebase
+
+- *app/components/* folder will contain the individual Vue components that will make up the Bookmarking App
+- *app/filters/* directory will house the 2 filters we will be creating: filtering by category and filtering by the user's search term
+- *app/store/* will contain our simplified store and Firebase logic
+- *app/App.vue* is our root Vue component
+- *app/main.js* is the root Vue instance
+
+----
+cd app
+mkdir components filters store
+cd ..
+----
+
+== Problème avec Vue 1 et Vue 2
+
+https://github.com/vuejs/vue-migration-helper
+
+----
+npm install --global vue-migration-helper
+vue-migration-helper app\
+----
+
+----
+1. Replace filtered value in :bookmarks="bookmarks | filterBookmarks('category', selectedCategory)" with a method or computed property
+  Line 9: app/App.vue
+  Reason: Filters can now only be used inside text interpolations, e.g. {{ date | formatDate('YY-MM-DD') }}
+  More info: http://vuejs.org/guide/migration.html#Filters-Outside-Text-Interpolations
+
+2. Replace store.on with store.subscribe or eventBus.on, creating the eventBus from an empty Vue instance (see the link below for details)
+  Line 47: app/App.vue
+  Reason: The store no longer exposes an event emitter interface
+  More info: http://vuejs.org/guide/migration-vuex.html#Store’s-Event-Emitter
+
+3. Replace filtered value in v-for="(id, bookmark) in bookmarks | filterBookmarks('title', query)" with a method or computed property
+  Line 10: app/components/BookmarkList.vue
+  Reason: Filters can now only be used inside text interpolations, e.g. {{ date | formatDate('YY-MM-DD') }}
+  More info: http://vuejs.org/guide/migration.html#Filters-Outside-Text-Interpolations
+
+4. Switch argument order in v-for="(id, bookmark) in bookmarks" to (bookmark, id)
+  Line 11: app/components/BookmarkList.vue
+  Reason: Argument order for v-for has been updated to match JavaScript conventions
+  More info: http://vuejs.org/guide/migration.html#v-for-Argument-Order-for-Arrays
+
+5. Replace this.$broadcast('add-bookmark') to use a global event bus or vuex (see link below for implementation details)
+  Line 67: app/components/Sidebar.vue
+  Reason: $dispatch and $broadcast have been removed because the pattern doesn't scale well
+  More info: http://vuejs.org/guide/migration.html#dispatch-and-broadcast
+
+6. Replace this.$broadcast('add-category') to use a global event bus or vuex (see link below for implementation details)
+  Line 71: app/components/Sidebar.vue
+  Reason: $dispatch and $broadcast have been removed because the pattern doesn't scale well
+  More info: http://vuejs.org/guide/migration.html#dispatch-and-broadcast
+
+7. Replace this.$dispatch('category-selected', category) to use a global event bus or vuex (see link below for implementation details)
+  Line 80: app/components/Sidebar.vue
+  Reason: $dispatch and $broadcast have been removed because the pattern doesn't scale well
+  More info: http://vuejs.org/guide/migration.html#dispatch-and-broadcast
+
+8. Replace store.emit with eventBus.emit, creating the eventBus from an empty Vue instance (see the link below for details)
+  Line 32: app/store/index.js
+  Reason: The store no longer exposes an event emitter interface
+  More info: http://vuejs.org/guide/migration-vuex.html#Store’s-Event-Emitter
+
+9. Replace store.emit with eventBus.emit, creating the eventBus from an empty Vue instance (see the link below for details)
+  Line 38: app/store/index.js
+  Reason: The store no longer exposes an event emitter interface
+  More info: http://vuejs.org/guide/migration-vuex.html#Store’s-Event-Emitter
+
+10. Replace store.emit with eventBus.emit, creating the eventBus from an empty Vue instance (see the link below for details)
+  Line 43: app/store/index.js
+  Reason: The store no longer exposes an event emitter interface
+  More info: http://vuejs.org/guide/migration-vuex.html#Store’s-Event-Emitter
+----
+
+=== Gestion des évènements
+
+Création d'un fichier JS contenant le bus de gestion des évènements qu'il suffit d'importer pour l'utiliser.
+
+https://stackoverflow.com/questions/41631741/vuejs2-how-to-create-event-buses-for-single-file-component-hierarchies
+https://medium.com/@jilsonthomas/create-a-global-event-bus-in-vue-js-838a5d9ab03a
+
+== Lancement de l'application
+
+----
+webpack
+electron .
+----
