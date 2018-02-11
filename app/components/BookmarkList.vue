@@ -15,7 +15,7 @@
     <div id="toolbar">
       <div class="ui inverted icon fluid input">
         <button @click="addBookmark"
-          class="ui grey inverted basic icon circular button right-float">
+          class="ui white inverted basic icon circular button right-float">
           <i class="icon add"></i>
         </button>
           

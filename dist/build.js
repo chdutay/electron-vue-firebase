@@ -68,10 +68,10 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_assert__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_assert__ = __webpack_require__(79);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__src_assert__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_0__src_assert__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_crypt__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_crypt__ = __webpack_require__(80);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_1__src_crypt__["a"]; });
 /* unused harmony reexport base64Decode */
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_1__src_crypt__["c"]; });
@@ -92,7 +92,7 @@
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_6__src_errors__["a"]; });
 /* unused harmony reexport FirebaseError */
 /* unused harmony reexport patchCapture */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_json__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_json__ = __webpack_require__(81);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return __WEBPACK_IMPORTED_MODULE_7__src_json__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return __WEBPACK_IMPORTED_MODULE_7__src_json__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_jwt__ = __webpack_require__(158);
@@ -101,7 +101,7 @@
 /* unused harmony reexport issuedAtTime */
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return __WEBPACK_IMPORTED_MODULE_8__src_jwt__["b"]; });
 /* unused harmony reexport isValidTimestamp */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_obj__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_obj__ = __webpack_require__(82);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_9__src_obj__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_9__src_obj__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_9__src_obj__["c"]; });
@@ -1727,7 +1727,7 @@ var KeyParseError = errs.KeyParseError;
 var formats = {};
 formats['auto'] = __webpack_require__(119);
 formats['pem'] = __webpack_require__(16);
-formats['pkcs1'] = __webpack_require__(70);
+formats['pkcs1'] = __webpack_require__(71);
 formats['pkcs8'] = __webpack_require__(37);
 formats['rfc4253'] = __webpack_require__(23);
 formats['ssh'] = __webpack_require__(121);
@@ -2187,7 +2187,7 @@ var KeyEncryptedError = errs.KeyEncryptedError;
 var formats = {};
 formats['auto'] = __webpack_require__(119);
 formats['pem'] = __webpack_require__(16);
-formats['pkcs1'] = __webpack_require__(70);
+formats['pkcs1'] = __webpack_require__(71);
 formats['pkcs8'] = __webpack_require__(37);
 formats['rfc4253'] = __webpack_require__(23);
 formats['ssh-private'] = __webpack_require__(51);
@@ -2543,12 +2543,12 @@ var PRIORITY_INDEX = new PriorityIndex();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_SortedMap__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Node__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__snap__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__snap__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__indexes_PriorityIndex__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__indexes_KeyIndex__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__IndexMap__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__IndexMap__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__LeafNode__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__comparators__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__comparators__ = __webpack_require__(92);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -3536,7 +3536,7 @@ var utils = __webpack_require__(6);
 var Key = __webpack_require__(7);
 var PrivateKey = __webpack_require__(9);
 
-var pkcs1 = __webpack_require__(70);
+var pkcs1 = __webpack_require__(71);
 var pkcs8 = __webpack_require__(37);
 var sshpriv = __webpack_require__(51);
 var rfc4253 = __webpack_require__(23);
@@ -8261,7 +8261,7 @@ module.exports = {
   toHash: toHash,
   getProperty: getProperty,
   escapeQuotes: escapeQuotes,
-  equal: __webpack_require__(73),
+  equal: __webpack_require__(74),
   ucs2length: __webpack_require__(266),
   varOccurences: varOccurences,
   varReplace: varReplace,
@@ -8674,9 +8674,9 @@ var KEY_INDEX = new KeyIndex();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__LeafNode__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Node__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__firebase_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__childSet__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__comparators__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__IndexMap__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__childSet__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__comparators__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__IndexMap__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__indexes_PriorityIndex__ = __webpack_require__(10);
 /**
  * Copyright 2017 Google Inc.
@@ -8868,7 +8868,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
 // Load modules
 
 const Crypto = __webpack_require__(3);
-const Path = __webpack_require__(65);
+const Path = __webpack_require__(66);
 const Util = __webpack_require__(4);
 const Escape = __webpack_require__(221);
 
@@ -11196,7 +11196,7 @@ Identity._oldVersionDetect = function (obj) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__bus_js__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__bus_js__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__download__ = __webpack_require__(211);
 //import EventEmitter from 'events'
 
@@ -11238,7 +11238,7 @@ bookmarksRef.on('value', snapshot => {
         // Get the unique key generated by push()
         var bookmarkId = newBookmarkRef.key;
 
-        alert("bookmarkId=" + bookmarkId);
+        console.log("bookmarkId=" + bookmarkId);
 
         __WEBPACK_IMPORTED_MODULE_2__download__["a" /* default */].downloadFile(bookmarkId, bookmark).then(function () {
             alert("File " + bookmark.title + " succesfully downloaded");
@@ -11437,7 +11437,7 @@ var Index = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeafNode; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__firebase_util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__snap__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__snap__ = __webpack_require__(88);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -12378,10 +12378,10 @@ var SortedMap = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Repo; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_ServerValues__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_ServerValues__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__snap_nodeFromJSON__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_Path__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SparseSnapshotTree__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__SparseSnapshotTree__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__SyncTree__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__SnapshotHolder__ = __webpack_require__(187);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__firebase_util__ = __webpack_require__(0);
@@ -12389,11 +12389,11 @@ var SortedMap = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__AuthTokenProvider__ = __webpack_require__(188);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__stats_StatsManager__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__stats_StatsReporter__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__stats_StatsListener__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__stats_StatsListener__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__view_EventQueue__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__PersistentConnection__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__PersistentConnection__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ReadonlyRestClient__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__api_Database__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__api_Database__ = __webpack_require__(83);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -13015,7 +13015,7 @@ var CacheNode = /** @class */ (function () {
 // Load modules
 
 const Sntp = __webpack_require__(114);
-const Boom = __webpack_require__(64);
+const Boom = __webpack_require__(65);
 
 
 // Declare internals
@@ -13211,7 +13211,7 @@ module.exports = require("querystring");
 // Copyright 2012 Joyent, Inc.  All rights reserved.
 
 var assert = __webpack_require__(2);
-var sshpk = __webpack_require__(67);
+var sshpk = __webpack_require__(68);
 var util = __webpack_require__(4);
 
 var HASH_ALGOS = {
@@ -14467,17 +14467,17 @@ var CONSTANTS = {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Reference; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__onDisconnect__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__onDisconnect__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__TransactionResult__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_util_util__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_util_NextPushId__ = __webpack_require__(173);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Query__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Query__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_Repo__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_util_Path__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_view_QueryParams__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__core_util_validation__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__firebase_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_SyncPoint__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_SyncPoint__ = __webpack_require__(98);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -15537,7 +15537,7 @@ var StatsManager = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__firebase_util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Repo__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_libs_parser__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_libs_parser__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_validation__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Repo_transaction__ = __webpack_require__(199);
 /**
@@ -15675,6 +15675,17 @@ var RepoManager = /** @class */ (function () {
 
 /***/ }),
 /* 61 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+
+const bus = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a();
+/* harmony default export */ __webpack_exports__["a"] = (bus);
+
+/***/ }),
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15767,13 +15778,13 @@ module.exports = function extend() {
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports) {
 
 module.exports = require("net");
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15846,7 +15857,7 @@ exports.defer = defer
 
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16286,13 +16297,13 @@ exports.badImplementation = function (message, data) {
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports) {
 
 module.exports = require("path");
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16427,7 +16438,7 @@ exports.timestampMessage = function (credentials, localtimeOffsetMsec) {
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2015 Joyent, Inc.
@@ -16472,7 +16483,7 @@ module.exports = {
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports) {
 
 // Copyright 2011 Mark Cavage <mcavage@gmail.com> All rights reserved.
@@ -16491,7 +16502,7 @@ module.exports = {
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports) {
 
 // Copyright 2011 Mark Cavage <mcavage@gmail.com> All rights reserved.
@@ -16533,7 +16544,7 @@ module.exports = {
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2015 Joyent, Inc.
@@ -16859,7 +16870,7 @@ function writePkcs1ECDSAPrivate(der, key) {
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports) {
 
 function Caseless (dict) {
@@ -16932,14 +16943,14 @@ module.exports.httpify = function (resp, headers) {
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var url = __webpack_require__(13)
-  , equal = __webpack_require__(73)
+  , equal = __webpack_require__(74)
   , util = __webpack_require__(26)
   , SchemaObject = __webpack_require__(137)
   , traverse = __webpack_require__(267);
@@ -17210,7 +17221,7 @@ function resolveIds(schema) {
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17260,13 +17271,13 @@ module.exports = function equal(a, b) {
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var resolve = __webpack_require__(72);
+var resolve = __webpack_require__(73);
 
 module.exports = {
   Validation: errorSubclass(ValidationError),
@@ -17301,7 +17312,7 @@ function errorSubclass(Subclass) {
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var v1 = __webpack_require__(317);
@@ -17315,7 +17326,7 @@ module.exports = uuid;
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -28119,7 +28130,7 @@ return Vue$3;
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28172,7 +28183,7 @@ return Vue$3;
 });
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28221,7 +28232,7 @@ var assertionError = function (message) {
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28540,7 +28551,7 @@ var base64Decode = function (str) {
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28583,7 +28594,7 @@ function stringify(data) {
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28737,14 +28748,14 @@ var every = function (obj, fn) {
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Database; });
 /* unused harmony export DatabaseInternals */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_util_libs_parser__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_util_libs_parser__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_util_Path__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Reference__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_Repo__ = __webpack_require__(45);
@@ -28885,14 +28896,14 @@ var DatabaseInternals = /** @class */ (function () {
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return parseRepoInfo; });
 /* unused harmony export parseURL */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Path__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__RepoInfo__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__RepoInfo__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(1);
 /**
  * Copyright 2017 Google Inc.
@@ -29019,7 +29030,7 @@ var parseURL = function (dataURL) {
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29139,7 +29150,7 @@ var RepoInfo = /** @class */ (function () {
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29262,7 +29273,7 @@ var OnDisconnect = /** @class */ (function () {
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29270,8 +29281,8 @@ var OnDisconnect = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__firebase_util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_snap_indexes_KeyIndex__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_snap_indexes_PriorityIndex__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_snap_indexes_ValueIndex__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_snap_indexes_PathIndex__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_snap_indexes_ValueIndex__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_snap_indexes_PathIndex__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_util_util__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_util_Path__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_util_validation__ = __webpack_require__(18);
@@ -29783,7 +29794,7 @@ var Query = /** @class */ (function () {
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29847,7 +29858,7 @@ var validatePriorityNode = function (priorityNode) {
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29956,13 +29967,13 @@ var VALUE_INDEX = new ValueIndex();
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IndexMap; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__firebase_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__childSet__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__childSet__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Node__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__indexes_PriorityIndex__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__indexes_KeyIndex__ = __webpack_require__(28);
@@ -30148,7 +30159,7 @@ var IndexMap = /** @class */ (function () {
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30285,7 +30296,7 @@ var buildChildSet = function (childList, cmp, keyFn, mapSortFn) {
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30319,7 +30330,7 @@ function NAME_COMPARATOR(left, right) {
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30431,7 +30442,7 @@ var PathIndex = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30441,7 +30452,7 @@ var PathIndex = /** @class */ (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return resolveDeferredValueSnapshot; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__firebase_util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Path__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__SparseSnapshotTree__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__SparseSnapshotTree__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__snap_LeafNode__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__snap_nodeFromJSON__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__snap_indexes_PriorityIndex__ = __webpack_require__(10);
@@ -30549,14 +30560,14 @@ var resolveDeferredValueSnapshot = function (node, serverValues) {
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SparseSnapshotTree; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_Path__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__snap_indexes_PriorityIndex__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_CountedSet__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_CountedSet__ = __webpack_require__(96);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -30734,7 +30745,7 @@ var SparseSnapshotTree = /** @class */ (function () {
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30837,7 +30848,7 @@ var CountedSet = /** @class */ (function () {
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30892,7 +30903,7 @@ var Overwrite = /** @class */ (function () {
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30900,7 +30911,7 @@ var Overwrite = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__view_CacheNode__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__snap_ChildrenNode__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__firebase_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__view_ViewCache__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__view_ViewCache__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__view_View__ = __webpack_require__(180);
 /**
  * Copyright 2017 Google Inc.
@@ -31153,7 +31164,7 @@ var SyncPoint = /** @class */ (function () {
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31257,7 +31268,7 @@ var ViewCache = /** @class */ (function () {
 
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31309,7 +31320,7 @@ var StatsListener = /** @class */ (function () {
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31320,8 +31331,8 @@ var StatsListener = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_Path__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_VisibilityMonitor__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_OnlineMonitor__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__realtime_Connection__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ServerActions__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__realtime_Connection__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ServerActions__ = __webpack_require__(106);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -32132,7 +32143,7 @@ var PersistentConnection = /** @class */ (function (_super) {
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32218,7 +32229,7 @@ var EventEmitter = /** @class */ (function () {
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32721,7 +32732,7 @@ var Connection = /** @class */ (function () {
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32741,7 +32752,7 @@ var Connection = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BrowserPollConnection; });
 /* unused harmony export FirebaseIFrameScriptHolder */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_util_CountedSet__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_util_CountedSet__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_stats_StatsManager__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__polling_PacketReceiver__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Constants__ = __webpack_require__(41);
@@ -33376,7 +33387,7 @@ var FirebaseIFrameScriptHolder = /** @class */ (function () {
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33739,7 +33750,7 @@ var WebSocketConnection = /** @class */ (function () {
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33816,7 +33827,7 @@ var ServerActions = /** @class */ (function () {
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33967,17 +33978,6 @@ var RangedFilter = /** @class */ (function () {
 
 //# sourceMappingURL=RangedFilter.js.map
 
-
-/***/ }),
-/* 107 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-
-const bus = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a();
-/* harmony default export */ __webpack_exports__["a"] = (bus);
 
 /***/ }),
 /* 108 */
@@ -37143,7 +37143,7 @@ function dumpException(ex)
  */
 
 var db = __webpack_require__(245)
-var extname = __webpack_require__(65).extname
+var extname = __webpack_require__(66).extname
 
 /**
  * Module variables.
@@ -39445,6 +39445,7 @@ module.exports = bytesToUuid;
 //
 //
 //
+//
 
 
 
@@ -39464,8 +39465,11 @@ module.exports = bytesToUuid;
     methods: {
         // set the bookmarks and categories data properties to the new ones
         // received from the store
-        updateBookmark(bookmark) {
-            if (bookmark.title === this.bookmark.title) this.bookmark = bookmark;
+        updateBookmark(bookmarkId, bookmark) {
+            if (bookmarkId == this.id) {
+                console.log("bookmarkId=" + bookmarkId + ' ' + bookmark.received_bytes + '/' + bookmark.total_bytes);
+                this.bookmark = bookmark;
+            }
         },
 
         deleteBookmark() {
@@ -39474,6 +39478,11 @@ module.exports = bytesToUuid;
 
         openLink() {
             __WEBPACK_IMPORTED_MODULE_0_electron__["shell"].openExternal(this.url);
+        },
+
+        progress() {
+            console.log('Progress:' + this.bookmark.received_bytes / this.bookmark.total_bytes * 100);
+            return this.bookmark.received_bytes / this.bookmark.total_bytes;
         }
     }
 
@@ -39485,6 +39494,8 @@ module.exports = bytesToUuid;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__store__ = __webpack_require__(39);
+//
+//
 //
 //
 //
@@ -39542,11 +39553,31 @@ module.exports = bytesToUuid;
         },
 
         addBookmark() {
-            const newBookmark = {
-                title: this.bookmarkTitle,
-                url: this.bookmarkUrl
-            };
-            __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].addBookmark(newBookmark);
+            var bookmarks = this.bookmarkUrl.replace(/\n/g, " ").split(" ");
+            console.log(bookmarks);
+
+            for (var i = 0; i < bookmarks.length; ++i) {
+
+                var url = bookmarks[i];
+
+                // not empty
+                if (url && url.trim().length) {
+
+                    const newBookmark = {
+                        title: '',
+                        url: url
+                    };
+
+                    console.log(newBookmark);
+                    __WEBPACK_IMPORTED_MODULE_0__store__["a" /* default */].addBookmark(newBookmark);
+                }
+            }
+
+            // const newBookmark = {
+            //     title: this.bookmarkTitle,
+            //     url: this.bookmarkUrl
+            // }
+            // store.addBookmark(newBookmark)
             $('#bookmark-modal').modal('hide');
         }
 
@@ -39569,15 +39600,42 @@ module.exports = bytesToUuid;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bus_js__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bus_js__ = __webpack_require__(61);
 
 
 
 
+// define global event bus 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$bus = __WEBPACK_IMPORTED_MODULE_2__bus_js__["a" /* default */];
+
+// Global filters >
+
+/**
+ * Vue filter to convert the given value to percent.
+ * http://jsfiddle.net/bryan_k/qauf3qyh/
+ *
+ * @param {String} value    The value string.
+ * @param {Number} decimals The number of decimal places.
+ */
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.filter('percentage', function (value, decimals) {
+  if (!value) {
+    value = 0;
+  }
+
+  if (!decimals) {
+    decimals = 0;
+  }
+
+  value = value * 100;
+  value = Math.round(value * Math.pow(10, decimals)) / Math.pow(10, decimals);
+  value = value + '%';
+  return value;
+});
+
+// < Global filters
 
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: 'div',
@@ -39589,7 +39647,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(78);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2b9433a8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(334);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_vue_loader_lib_runtime_component_normalizer__ = __webpack_require__(53);
@@ -40367,8 +40425,8 @@ var ErrorFactory = /** @class */ (function () {
 /* unused harmony export issuedAtTime */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return isValidFormat; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return isAdmin; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__crypt__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__json__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__crypt__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__json__ = __webpack_require__(81);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -40504,7 +40562,7 @@ var isAdmin = function (token) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return querystring; });
 /* unused harmony export querystringDecode */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__obj__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__obj__ = __webpack_require__(82);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -41259,7 +41317,7 @@ function validateContextObject(fnName, argumentNumber, context, optional) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return stringToByteArray; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return stringLength; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assert__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assert__ = __webpack_require__(79);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -41701,8 +41759,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony export (immutable) */ __webpack_exports__["registerDatabase"] = registerDatabase;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServerValue", function() { return ServerValue; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__firebase_app__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_api_Database__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_api_Query__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_api_Database__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_api_Query__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_api_Reference__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_core_util_util__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_core_RepoManager__ = __webpack_require__(60);
@@ -41715,7 +41773,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "enableLogging", function() { return __WEBPACK_IMPORTED_MODULE_4__src_core_util_util__["h"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_api_DataSnapshot__ = __webpack_require__(56);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "DataSnapshot", function() { return __WEBPACK_IMPORTED_MODULE_9__src_api_DataSnapshot__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__src_api_onDisconnect__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__src_api_onDisconnect__ = __webpack_require__(86);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "OnDisconnect", function() { return __WEBPACK_IMPORTED_MODULE_10__src_api_onDisconnect__["a"]; });
 /**
  * Copyright 2017 Google Inc.
@@ -42439,9 +42497,9 @@ var CancelEvent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__operation_ListenComplete__ = __webpack_require__(178);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__operation_Merge__ = __webpack_require__(179);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__operation_Operation__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__operation_Overwrite__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__operation_Overwrite__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__util_Path__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__SyncPoint__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__SyncPoint__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__WriteTree__ = __webpack_require__(185);
 /**
  * Copyright 2017 Google Inc.
@@ -43285,7 +43343,7 @@ var ListenComplete = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Merge; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Operation__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Overwrite__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Overwrite__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_Path__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__firebase_util__ = __webpack_require__(0);
 /**
@@ -43378,7 +43436,7 @@ var Merge = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ViewProcessor__ = __webpack_require__(181);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__snap_ChildrenNode__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__CacheNode__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ViewCache__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ViewCache__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__EventGenerator__ = __webpack_require__(184);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__firebase_util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__operation_Operation__ = __webpack_require__(19);
@@ -45610,7 +45668,7 @@ var StatsCollection = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StatsReporter; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__firebase_util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__StatsListener__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__StatsListener__ = __webpack_require__(100);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -45865,7 +45923,7 @@ var EventList = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VisibilityMonitor; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EventEmitter__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EventEmitter__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__firebase_util__ = __webpack_require__(0);
 /**
  * Copyright 2017 Google Inc.
@@ -45964,7 +46022,7 @@ var VisibilityMonitor = /** @class */ (function (_super) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OnlineMonitor; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__firebase_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__EventEmitter__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__EventEmitter__ = __webpack_require__(102);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -46059,8 +46117,8 @@ var OnlineMonitor = /** @class */ (function (_super) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TransportManager; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserPollConnection__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__WebSocketConnection__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserPollConnection__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__WebSocketConnection__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_util_util__ = __webpack_require__(1);
 /**
  * Copyright 2017 Google Inc.
@@ -46262,7 +46320,7 @@ var PacketReceiver = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadonlyRestClient; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__firebase_util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ServerActions__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ServerActions__ = __webpack_require__(106);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -46463,11 +46521,11 @@ var ReadonlyRestClient = /** @class */ (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__snap_indexes_KeyIndex__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__snap_indexes_PriorityIndex__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__snap_indexes_ValueIndex__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__snap_indexes_PathIndex__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__snap_indexes_ValueIndex__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__snap_indexes_PathIndex__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__filter_IndexedFilter__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__filter_LimitedFilter__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__filter_RangedFilter__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__filter_RangedFilter__ = __webpack_require__(107);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -46880,7 +46938,7 @@ var QueryParams = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LimitedFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__RangedFilter__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__RangedFilter__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__snap_ChildrenNode__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__snap_Node__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__firebase_util__ = __webpack_require__(0);
@@ -47157,7 +47215,7 @@ var LimitedFilter = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_Tree__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__snap_indexes_PriorityIndex__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_ServerValues__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_ServerValues__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__util_validation__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__snap_nodeFromJSON__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__snap_ChildrenNode__ = __webpack_require__(11);
@@ -47977,8 +48035,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "statsIncrementCounter", function() { return statsIncrementCounter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dataUpdateCount", function() { return dataUpdateCount; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "interceptServerData", function() { return interceptServerData; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__realtime_WebSocketConnection__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__realtime_BrowserPollConnection__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__realtime_WebSocketConnection__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__realtime_BrowserPollConnection__ = __webpack_require__(104);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -48046,10 +48104,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "queryIdentifier", function() { return queryIdentifier; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listens", function() { return listens; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "forceRestClient", function() { return forceRestClient; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_RepoInfo__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_PersistentConnection__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_RepoInfo__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_PersistentConnection__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_RepoManager__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__realtime_Connection__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__realtime_Connection__ = __webpack_require__(103);
 /**
  * Copyright 2017 Google Inc.
  *
@@ -49353,6 +49411,8 @@ module.exports = require("child_process");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_request__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_request___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_request__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__store__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bus_js__ = __webpack_require__(61);
+
 
 
 
@@ -49391,8 +49451,6 @@ const downloadsFolder = "C:\\Users\\hermit-lada\\Downloads";
                     // Update the received bytes
                     received_bytes += chunk.length;
 
-                    __WEBPACK_IMPORTED_MODULE_1__store__["a" /* default */].updateProgressBookmark(bookmarkId, received_bytes, total_bytes);
-
                     bookmark.onProgress(received_bytes, total_bytes);
                 });
             } else {
@@ -49400,11 +49458,17 @@ const downloadsFolder = "C:\\Users\\hermit-lada\\Downloads";
                     // Update the received bytes
                     received_bytes += chunk.length;
 
-                    __WEBPACK_IMPORTED_MODULE_1__store__["a" /* default */].updateProgressBookmark(bookmarkId, received_bytes, total_bytes);
+                    bookmark.received_bytes = received_bytes;
+                    bookmark.total_bytes = total_bytes;
+
+                    // send newx event to refesh bookmark
+                    __WEBPACK_IMPORTED_MODULE_2__bus_js__["a" /* default */].$emit("bookmark-updated", bookmarkId, bookmark);
                 });
             }
 
             req.on('end', function () {
+                // save total download
+                __WEBPACK_IMPORTED_MODULE_1__store__["a" /* default */].updateProgressBookmark(bookmarkId, received_bytes, total_bytes);
                 resolve();
             });
         });
@@ -49484,9 +49548,9 @@ function showProgress(received, total) {
 
 
 
-var extend = __webpack_require__(61)
+var extend = __webpack_require__(62)
 var cookies = __webpack_require__(108)
-var helpers = __webpack_require__(63)
+var helpers = __webpack_require__(64)
 
 var paramsHaveRequestBody = helpers.paramsHaveRequestBody
 
@@ -49661,7 +49725,7 @@ Object.defineProperty(request, 'debug', {
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-var net = __webpack_require__(62);
+var net = __webpack_require__(63);
 var urlParse = __webpack_require__(13).parse;
 var pubsuffix = __webpack_require__(109);
 var Store = __webpack_require__(111).Store;
@@ -51214,13 +51278,13 @@ var aws4 = __webpack_require__(229)
 var httpSignature = __webpack_require__(231)
 var mime = __webpack_require__(124)
 var stringstream = __webpack_require__(247)
-var caseless = __webpack_require__(71)
+var caseless = __webpack_require__(72)
 var ForeverAgent = __webpack_require__(249)
 var FormData = __webpack_require__(250)
-var extend = __webpack_require__(61)
+var extend = __webpack_require__(62)
 var isstream = __webpack_require__(133)
 var isTypedArray = __webpack_require__(257).strict
-var helpers = __webpack_require__(63)
+var helpers = __webpack_require__(64)
 var cookies = __webpack_require__(108)
 var getProxyFromURI = __webpack_require__(258)
 var Querystring = __webpack_require__(259).Querystring
@@ -52769,12 +52833,12 @@ module.exports = require("zlib");
 
 // Export sub-modules
 
-exports.error = exports.Error = __webpack_require__(64);
+exports.error = exports.Error = __webpack_require__(65);
 exports.sntp = __webpack_require__(114);
 
 exports.server = __webpack_require__(224);
 exports.client = __webpack_require__(227);
-exports.crypto = __webpack_require__(66);
+exports.crypto = __webpack_require__(67);
 exports.utils = __webpack_require__(47);
 
 exports.uri = {
@@ -52980,10 +53044,10 @@ module.exports = require("dns");
 
 // Load modules
 
-const Boom = __webpack_require__(64);
+const Boom = __webpack_require__(65);
 const Hoek = __webpack_require__(33);
 const Cryptiles = __webpack_require__(115);
-const Crypto = __webpack_require__(66);
+const Crypto = __webpack_require__(67);
 const Utils = __webpack_require__(47);
 
 
@@ -54010,7 +54074,7 @@ module.exports = {"_from":"hawk@~6.0.2","_id":"hawk@6.0.2","_inBundle":false,"_i
 const Url = __webpack_require__(13);
 const Hoek = __webpack_require__(33);
 const Cryptiles = __webpack_require__(115);
-const Crypto = __webpack_require__(66);
+const Crypto = __webpack_require__(67);
 const Utils = __webpack_require__(47);
 
 
@@ -55595,8 +55659,8 @@ module.exports = {
 
 // Copyright 2011 Mark Cavage <mcavage@gmail.com> All rights reserved.
 
-var errors = __webpack_require__(68);
-var types = __webpack_require__(69);
+var errors = __webpack_require__(69);
+var types = __webpack_require__(70);
 
 var Reader = __webpack_require__(235);
 var Writer = __webpack_require__(236);
@@ -55630,8 +55694,8 @@ for (var e in errors) {
 
 var assert = __webpack_require__(34);
 
-var ASN1 = __webpack_require__(69);
-var errors = __webpack_require__(68);
+var ASN1 = __webpack_require__(70);
+var errors = __webpack_require__(69);
 
 
 ///--- Globals
@@ -55896,8 +55960,8 @@ module.exports = Reader;
 // Copyright 2011 Mark Cavage <mcavage@gmail.com> All rights reserved.
 
 var assert = __webpack_require__(34);
-var ASN1 = __webpack_require__(69);
-var errors = __webpack_require__(68);
+var ASN1 = __webpack_require__(70);
+var errors = __webpack_require__(69);
 
 
 ///--- Globals
@@ -56632,7 +56696,7 @@ var assert = __webpack_require__(2);
 var crypto = __webpack_require__(3);
 var http = __webpack_require__(25);
 var util = __webpack_require__(4);
-var sshpk = __webpack_require__(67);
+var sshpk = __webpack_require__(68);
 var jsprim = __webpack_require__(240);
 var utils = __webpack_require__(49);
 
@@ -58628,7 +58692,7 @@ return exports;
 
 var assert = __webpack_require__(2);
 var crypto = __webpack_require__(3);
-var sshpk = __webpack_require__(67);
+var sshpk = __webpack_require__(68);
 var utils = __webpack_require__(49);
 
 var HASH_ALGOS = utils.HASH_ALGOS;
@@ -58860,7 +58924,7 @@ ForeverAgent.SSL = ForeverAgentSSL
 
 var util = __webpack_require__(4)
   , Agent = __webpack_require__(25).Agent
-  , net = __webpack_require__(62)
+  , net = __webpack_require__(63)
   , tls = __webpack_require__(125)
   , AgentSSL = __webpack_require__(31).Agent
   
@@ -59001,7 +59065,7 @@ function createConnectionSSL (port, host, options) {
 
 var CombinedStream = __webpack_require__(126);
 var util = __webpack_require__(4);
-var path = __webpack_require__(65);
+var path = __webpack_require__(66);
 var http = __webpack_require__(25);
 var https = __webpack_require__(31);
 var parseUrl = __webpack_require__(13).parse;
@@ -60301,7 +60365,7 @@ module.exports = function (str, opts) {
 var fs = __webpack_require__(30)
 var qs = __webpack_require__(48)
 var validate = __webpack_require__(263)
-var extend = __webpack_require__(61)
+var extend = __webpack_require__(62)
 
 function Har (request) {
   this.request = request
@@ -60612,7 +60676,7 @@ exports.timings = function (data) {
 
 
 var compileSchema = __webpack_require__(265)
-  , resolve = __webpack_require__(72)
+  , resolve = __webpack_require__(73)
   , Cache = __webpack_require__(268)
   , SchemaObject = __webpack_require__(137)
   , stableStringify = __webpack_require__(138)
@@ -60644,7 +60708,7 @@ Ajv.prototype.addKeyword = customKeyword.add;
 Ajv.prototype.getKeyword = customKeyword.get;
 Ajv.prototype.removeKeyword = customKeyword.remove;
 
-var errorClasses = __webpack_require__(74);
+var errorClasses = __webpack_require__(75);
 Ajv.ValidationError = errorClasses.Validation;
 Ajv.MissingRefError = errorClasses.MissingRef;
 Ajv.$dataMetaSchema = $dataMetaSchema;
@@ -61120,9 +61184,9 @@ function noop() {}
 "use strict";
 
 
-var resolve = __webpack_require__(72)
+var resolve = __webpack_require__(73)
   , util = __webpack_require__(26)
-  , errorClasses = __webpack_require__(74)
+  , errorClasses = __webpack_require__(75)
   , stableStringify = __webpack_require__(138);
 
 var validateGenerator = __webpack_require__(139);
@@ -61133,7 +61197,7 @@ var validateGenerator = __webpack_require__(139);
 
 var co = __webpack_require__(140);
 var ucs2length = util.ucs2length;
-var equal = __webpack_require__(73);
+var equal = __webpack_require__(74);
 
 // this error is thrown by async schemas to return validation errors via exception
 var ValidationError = errorClasses.Validation;
@@ -64205,7 +64269,7 @@ module.exports = function (ajv) {
 "use strict";
 
 
-var MissingRefError = __webpack_require__(74).MissingRef;
+var MissingRefError = __webpack_require__(75).MissingRef;
 
 module.exports = compileAsync;
 
@@ -64849,9 +64913,9 @@ module.exports = {"$id":"timings.json#","$schema":"http://json-schema.org/draft-
 "use strict";
 
 
-var caseless = __webpack_require__(71)
-var uuid = __webpack_require__(75)
-var helpers = __webpack_require__(63)
+var caseless = __webpack_require__(72)
+var uuid = __webpack_require__(76)
+var helpers = __webpack_require__(64)
 
 var md5 = helpers.md5
 var toBase64 = helpers.toBase64
@@ -65175,8 +65239,8 @@ module.exports = v4;
 
 var url = __webpack_require__(13)
 var qs = __webpack_require__(134)
-var caseless = __webpack_require__(71)
-var uuid = __webpack_require__(75)
+var caseless = __webpack_require__(72)
+var uuid = __webpack_require__(76)
 var oauth = __webpack_require__(320)
 var crypto = __webpack_require__(3)
 var Buffer = __webpack_require__(32).Buffer
@@ -65470,7 +65534,7 @@ exports.generateBase = generateBase
 "use strict";
 
 
-var uuid = __webpack_require__(75)
+var uuid = __webpack_require__(76)
 var CombinedStream = __webpack_require__(126)
 var isstream = __webpack_require__(133)
 var Buffer = __webpack_require__(32).Buffer
@@ -65932,7 +65996,7 @@ exports.Tunnel = Tunnel
 "use strict";
 
 
-var net = __webpack_require__(62)
+var net = __webpack_require__(63)
   , tls = __webpack_require__(125)
   , http = __webpack_require__(25)
   , https = __webpack_require__(31)
@@ -66366,13 +66430,14 @@ var render = function() {
       _c("div", { staticClass: "description" }, [
         _vm._v("\n      " + _vm._s(_vm.bookmark.url) + "\n      "),
         _c("a", { staticClass: "ui tiny label right-float" }, [
-          _vm._v(
-            _vm._s(_vm.bookmark.received_bytes) +
-              "/" +
-              _vm._s(_vm.bookmark.total_bytes)
-          )
+          _vm._v(_vm._s(_vm._f("percentage")(_vm.progress())))
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _c("div", {
+        staticClass: "progressbar",
+        style: "width:" + _vm.progress() * 100 + "%"
+      })
     ])
   ])
 }
@@ -66464,37 +66529,9 @@ var render = function() {
       _c("div", { staticClass: "content" }, [
         _c("form", { staticClass: "ui form" }, [
           _c("div", { staticClass: "field" }, [
-            _c("label", [_vm._v("Bookmark Title")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.bookmarkTitle,
-                  expression: "bookmarkTitle"
-                }
-              ],
-              attrs: {
-                type: "text",
-                placeholder: "Enter a title for your bookmark..."
-              },
-              domProps: { value: _vm.bookmarkTitle },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.bookmarkTitle = $event.target.value
-                }
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "field" }, [
             _c("label", [_vm._v("Bookmark URL")]),
             _vm._v(" "),
-            _c("input", {
+            _c("textarea", {
               directives: [
                 {
                   name: "model",
@@ -66504,7 +66541,8 @@ var render = function() {
                 }
               ],
               attrs: {
-                type: "text",
+                rows: "4",
+                cols: "50",
                 placeholder: "Enter the URL for your bookmark..."
               },
               domProps: { value: _vm.bookmarkUrl },

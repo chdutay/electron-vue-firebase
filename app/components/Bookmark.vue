@@ -5,8 +5,9 @@
       <a class="header">{{bookmark.title}}</a>
       <div class="description">
         {{bookmark.url}}
-        <a class="ui tiny label right-float">{{bookmark.received_bytes}}/{{bookmark.total_bytes}}</a>
+        <a class="ui tiny label right-float">{{progress() | percentage }}</a>
       </div>
+      <div class="progressbar" :style="'width:' + progress() * 100 + '%'"></div>
     </div>
   </div>
 </template>
@@ -32,9 +33,11 @@
         methods: {
             // set the bookmarks and categories data properties to the new ones
             // received from the store
-            updateBookmark(bookmark) {
-                if (bookmark.title === this.bookmark.title)
+            updateBookmark(bookmarkId, bookmark) {
+                if (bookmarkId == this.id) {
+                    console.log("bookmarkId=" + bookmarkId + ' ' + bookmark.received_bytes + '/' + bookmark.total_bytes)
                     this.bookmark = bookmark
+                }
             },
 
             deleteBookmark() {
@@ -43,6 +46,11 @@
 
             openLink() {
                 shell.openExternal(this.url)
+            },
+
+            progress() {
+                console.log('Progress:' + this.bookmark.received_bytes / this.bookmark.total_bytes * 100)
+                return (this.bookmark.received_bytes / this.bookmark.total_bytes)
             }
         }
 

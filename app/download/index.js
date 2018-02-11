@@ -1,5 +1,6 @@
 import request from 'request'
 import store from '../store'
+import bus from '../bus.js'
 
 const fs = require('fs')
 
@@ -36,8 +37,6 @@ export default {
                 req.on('data', function (chunk) {
                     // Update the received bytes
                     received_bytes += chunk.length;
-                    
-                    store.updateProgressBookmark(bookmarkId, received_bytes, total_bytes);
 
                     bookmark.onProgress(received_bytes, total_bytes);
                 });
@@ -46,11 +45,17 @@ export default {
                     // Update the received bytes
                     received_bytes += chunk.length;
                     
-                    store.updateProgressBookmark(bookmarkId, received_bytes, total_bytes);
+                    bookmark.received_bytes = received_bytes;
+                    bookmark.total_bytes = total_bytes;
+                    
+                    // send newx event to refesh bookmark
+                    bus.$emit("bookmark-updated", bookmarkId, bookmark);
                 });
             }
 
-            req.on('end', function () {
+            req.on('end', function () {   
+                // save total download
+                store.updateProgressBookmark(bookmarkId, received_bytes, total_bytes);
                 resolve();
             });
         });
