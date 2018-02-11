@@ -16,15 +16,6 @@
           <label>Bookmark URL</label>
           <input v-model="bookmarkUrl" type="text" placeholder="Enter the URL for your bookmark...">
         </div>
-        <div class="field">
-          <label>Bookmark category</label>
-          <select v-model="bookmarkCategory" class="ui simple dropdown">
-            <option value="">Select a category</option>
-            <template v-for="(name, color) in categories">
-              <option :value="name">{{ name }}</option>
-            </template>
-</select>
-</div>
 </form>
 
 </div>
@@ -43,33 +34,30 @@
         data() {
             return {
                 bookmarkTitle: '',
-                bookmarkUrl: '',
-                bookmarkCategory: ''
+                bookmarkUrl: ''
             }
         },
-
-        props: ['categories'],
 
         created: function() {
             // assign the event handler `updateListings` to the `data-updated` event
             this.$bus.$on('add-bookmark', this.initModal)
         },
+
         beforeDestroy: function() {
-            this.$bus.$off('add-bookmark', this.initModal)
+            this.$bus.$off('add-bookmark')
         },
 
         methods: {
-            
+
             initModal() {
-                this.bookmarkTitle = this.bookmarkUrl = this.bookmarkCategory = ''
+                this.bookmarkTitle = this.bookmarkUrl = ''
                 $('#bookmark-modal').modal('show')
             },
 
             addBookmark() {
                 const newBookmark = {
                     title: this.bookmarkTitle,
-                    url: this.bookmarkUrl,
-                    category: this.bookmarkCategory
+                    url: this.bookmarkUrl
                 }
                 store.addBookmark(newBookmark)
                 $('#bookmark-modal').modal('hide')
@@ -80,7 +68,7 @@
         events: {
 
             'add-bookmark': function() {
-                this.bookmarkTitle = this.bookmarkUrl = this.bookmarkCategory = ''
+                this.bookmarkTitle = this.bookmarkUrl = ''
                 $('#bookmark-modal').modal('show')
             }
 

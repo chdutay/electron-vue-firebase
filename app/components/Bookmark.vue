@@ -5,7 +5,6 @@
       <a class="header">{{title}}</a>
       <div class="description">
         {{url}}
-        <a class="ui tiny label right-float" :class="categoryColor">{{category}}</a>
       </div>
     </div>
   </div>
@@ -16,7 +15,7 @@
   import store from '../store'
 
   export default {
-    props: ['id', 'title', 'url', 'category', 'categoryColor'],
+    props: ['id', 'title', 'url'],
 
     methods: {
       deleteBookmark () {

@@ -191,3 +191,30 @@ https://medium.com/@jilsonthomas/create-a-global-event-bus-in-vue-js-838a5d9ab03
 webpack
 electron .
 ----
+
+== conversion en application de download
+
+----
+npm install request
+----
+
+Add configuration in JS file
+
+----
+----
+
+[TIP]
+--
+Il y a un problème avec webpack et fs, il faut modifier sa config comme cela :
+
+----
+target: 'electron',
+node: {
+    console: false,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  }
+----
+
+--

@@ -2,30 +2,37 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './app/main.js',
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'build.js'
-  },
-  module: {
-    rules: [
-        {
-            test: /\.vue$/,
-            loader: 'vue-loader'
+    target: 'electron',
+    entry: './app/main.js',
+    output: {
+        path: path.resolve(__dirname, './dist'),
+        filename: 'build.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
         },
-        {
-            test: /\.js$/,
-            loader: 'babel-loader',
-            exclude: /node_modules/
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/
         }
     ]
-  },
-  resolve: {
-      alias: {
-          vue: 'vue/dist/vue.js'
-      },
-  },
-  plugins: [
+    },
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.js'
+        },
+    },
+    node: {
+        console: false,
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
+    },
+    plugins: [
         new webpack.ExternalsPlugin('commonjs', [
             'electron'
         ]),

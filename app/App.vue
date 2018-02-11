@@ -1,15 +1,8 @@
 <template>
     <!-- The HTML template for our component -->
     <div id="app">
-    <sidebar
-      :categories="categories"
-      v-on:category-selected="setSelectedCategory">
-      <!-- bind 'selected-category event to the event handler setSelectedCategory' -->
-    </sidebar>
-<!--      :bookmarks="bookmarks | filterBookmarks('category', selectedCategory)"-->
     <bookmark-list
-      :bookmarks="bookmarks"
-      :categories="categories">
+      :bookmarks="bookmarks">
     </bookmark-list>
   </div>
 </template>
@@ -19,30 +12,18 @@
     // We will export a Vue component options object here
 
     import store from './store'
-    //  import eventBus from '../main.js'
-    import Sidebar from './components/Sidebar.vue'
     import BookmarkList from './components/BookmarkList.vue'
-    import {
-        filterBookmarks
-    } from './filters'
 
     export default {
 
         components: {
-            Sidebar,
             BookmarkList
         },
 
         data() {
             return {
-                categories: {},
-                bookmarks: {},
-                selectedCategory: ''
+                bookmarks: {}
             }
-        },
-
-        filters: {
-            filterBookmarks
         },
 
         created: function() {
@@ -55,13 +36,8 @@
         methods: {
             // set the bookmarks and categories data properties to the new ones
             // received from the store
-            updateListings(categories, bookmarks) {
-                this.categories = categories
+            updateListings(bookmarks) {
                 this.bookmarks = bookmarks
-            },
-
-            setSelectedCategory(category) {
-                this.selectedCategory = category;
             }
 
         }
