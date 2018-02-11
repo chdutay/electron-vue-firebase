@@ -9,8 +9,7 @@
     <div class="ui relaxed divided selection list">
       <bookmark v-for="(bookmark, id) in bookmarks" :key="id"
         :id="id"
-        :title="bookmark.title"
-        :url="bookmark.url">
+        :bookmark="bookmark">
       </bookmark>
     </div>
     <div id="toolbar">
