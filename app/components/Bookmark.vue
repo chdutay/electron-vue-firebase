@@ -34,8 +34,8 @@
             // set the bookmarks and categories data properties to the new ones
             // received from the store
             updateBookmark(bookmarkId, bookmark) {
-                if (bookmarkId == this.id) {
-                    console.log("bookmarkId=" + bookmarkId + ' ' + bookmark.received_bytes + '/' + bookmark.total_bytes)
+                if (bookmarkId == this.id) { // running
+                    // console.log("bookmarkId=" + bookmarkId + ' ' + bookmark.received_bytes + '/' + bookmark.total_bytes)
                     this.bookmark = bookmark
                 }
             },
@@ -45,11 +45,11 @@
             },
 
             openLink() {
-                shell.openExternal(this.url)
+                shell.openExternal(this.bookmark.url)
             },
 
             progress() {
-                console.log('Progress:' + this.bookmark.received_bytes / this.bookmark.total_bytes * 100)
+                // console.log('Progress:' + this.bookmark.received_bytes / this.bookmark.total_bytes * 100)
                 return (this.bookmark.received_bytes / this.bookmark.total_bytes)
             }
         }

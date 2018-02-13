@@ -1,0 +1,2 @@
+call webpack
+call electron .

@@ -218,3 +218,15 @@ node: {
 ----
 
 --
+
+== Packager son application
+
+https://zestedesavoir.com/tutoriels/996/vos-applications-avec-electron/#8-publier-son-application
+
+----
+npm install electron-packager -g --save-dev
+
+electron-packager . --all --name "electron-downloader" --version "1.0.0"
+----
+
+https://www.christianengvall.se/electron-packager-tutorial/

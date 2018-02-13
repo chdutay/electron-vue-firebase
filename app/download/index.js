@@ -18,11 +18,13 @@ export default {
             var received_bytes = 0;
             var total_bytes = 0;
 
+            // save download state
+            store.updateProgressBookmark(bookmarkId, received_bytes, total_bytes, 1); // Running
+
             var req = request({
                 method: 'GET',
                 uri: bookmark.url
             });
-
 
             var out = fs.createWriteStream(downloadsFolder + "\\" + bookmark.title);
             req.pipe(out);
@@ -30,6 +32,9 @@ export default {
             req.on('response', function (data) {
                 // Change the total bytes value to get progress later.
                 bookmark.total_bytes = total_bytes = parseInt(data.headers['content-length']);
+
+                // send newx event to refesh bookmark
+                bus.$emit("bookmark-updated", bookmarkId, bookmark);
             });
 
             // Get progress if callback exists
@@ -44,21 +49,59 @@ export default {
                 req.on('data', function (chunk) {
                     // Update the received bytes
                     received_bytes += chunk.length;
-                    
+
                     bookmark.received_bytes = received_bytes;
                     bookmark.total_bytes = total_bytes;
-                    
+
                     // send newx event to refesh bookmark
                     bus.$emit("bookmark-updated", bookmarkId, bookmark);
                 });
             }
 
-            req.on('end', function () {   
+            req.on('end', function () {
                 // save total download
-                store.updateProgressBookmark(bookmarkId, received_bytes, total_bytes);
+                store.updateProgressBookmark(bookmarkId, received_bytes, total_bytes, 2); // Over
+
                 resolve();
             });
         });
+    },
+
+    // function that manage concurrent donwloading
+    manageDownload(bookmarks) {
+
+        var runningDownload = 0;
+
+        // search running download
+        bookmarks.forEach(childSnapshot => {
+            var childKey = childSnapshot.key;
+            var childData = childSnapshot.val();
+
+            if (childData.state == 1) { // running
+                console.log("bookmarkId=" + childKey + " is running")
+                runningDownload++;
+            }
+        });
+
+        console.log("runningDownload=" + runningDownload)
+
+        if (runningDownload < 2) {
+            // search waiting download
+            bookmarks.forEach(childSnapshot => {
+                var childKey = childSnapshot.key;
+                var childData = childSnapshot.val();
+                if (childData.state == 0 && runningDownload < 2) { // waiting
+
+                    childData.state = 1 // running
+                    console.log("Launch bookmarkId=" + childKey)
+
+                    this.downloadFile(childKey, childData).then(function () {
+                        alert("File " + childData.title + " succesfully downloaded");
+                    });
+                    runningDownload = 2 // stop loop, manage download will be call again.
+                }
+            });
+        }
     },
 
     getFilenameFromUrl(url) {
@@ -66,52 +109,3 @@ export default {
     }
 
 }
-
-
-
-/// First version >
-
-/*
-//var request = require('request')
-const fs = require('fs')
-
-import request from 'request'
-//import fs from 'fs'
-
-// Downloader information
-function downloadFile(file_url, targetPath) {
-    // Save variable to know progress
-    var received_bytes = 0;
-    var total_bytes = 0;
-
-    var req = request({
-        method: 'GET',
-        uri: file_url
-    });
-
-    var out = fs.createWriteStream(targetPath);
-    req.pipe(out);
-
-    req.on('response', function (data) {
-        // Change the total bytes value to get progress later.
-        total_bytes = parseInt(data.headers['content-length']);
-    });
-
-    req.on('data', function (chunk) {
-        // Update the received bytes
-        received_bytes += chunk.length;
-
-        showProgress(received_bytes, total_bytes);
-    });
-
-    req.on('end', function () {
-        alert("File succesfully downloaded");
-    });
-}
-
-function showProgress(received, total) {
-    var percentage = (received * 100) / total;
-    console.log(percentage + "% | " + received + " bytes out of " + total + " bytes.");
-}
-
-*/

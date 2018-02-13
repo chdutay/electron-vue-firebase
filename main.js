@@ -17,6 +17,15 @@ function createWindow() {
     // Open the DevTools.
     mainWindow.webContents.openDevTools()
 
+//    setInterval(() => {
+//        app.setAppUserModelId("appid");
+//        let nt = new Notification({
+//            title: "test",
+//            body: "body"
+//        });
+//        nt.show()
+//    }, 5000);
+
     // dereference the mainWindow object when the window is closed
     mainWindow.on('closed', function () {
         mainWindow = null;
